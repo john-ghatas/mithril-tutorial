@@ -1,0 +1,7 @@
+sudo: required
+services:
+  - docker
+
+script:
+  - docker build . -t john/mithril-app-latest
+  - docker run -p 80:80 -d john/mithril-app-latests

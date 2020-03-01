@@ -13,6 +13,7 @@ COPY . /var/www/html
 
 RUN npm install
 RUN npm run build
+
 CMD ["nginx", "-g", "daemon off;"]
 RUN service nginx reload
 
